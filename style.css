@@ -2,7 +2,6 @@
 .header-image {
     position: relative;
     height: 300px;
-    overflow: hidden;
 }
 
 .header-image img {
@@ -20,4 +19,9 @@
     color: white;
     text-align: center;
     padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
 }
+
+
