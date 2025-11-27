@@ -20,10 +20,6 @@ Body {
     border-radius: 8px;
 }
 
-.card.revealed {
-    font-weight: bold;
-}
-
 .matched {
     background: rgb(37,97,41);
     cursor: default;

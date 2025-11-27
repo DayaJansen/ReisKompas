@@ -37,7 +37,6 @@ def render():
             div.classList.add("matched")
             div.innerText = card
         elif i in flipped:
-            div.classList.add("revealed")
             div.innerText = card
         else:
             div.innerText = "Memory kaart"
