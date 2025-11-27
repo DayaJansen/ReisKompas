@@ -45,6 +45,11 @@ main {
     padding-top: 10px;
 }
 
+/*Body*/
+Body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
 /* linkje naar memory */ 
 a.linksintext {
     text-decoration: none;

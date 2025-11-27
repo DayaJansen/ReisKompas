@@ -29,6 +29,11 @@ main {
     padding-top: 50px;
 }
 
+/*Body*/
+Body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
 /* plaatje */ 
 .header-image {
     position: relative;
