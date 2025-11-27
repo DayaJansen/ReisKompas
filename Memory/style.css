@@ -9,7 +9,7 @@ Body {
     gap: 15px;
     justify-content: center;
     margin-top: 25px;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 /*Kaarten*/
@@ -18,6 +18,10 @@ Body {
     padding: 20px;
     cursor: pointer;
     border-radius: 8px;
+}
+
+.card.revealed {
+    font-weight: bold;
 }
 
 .matched {
