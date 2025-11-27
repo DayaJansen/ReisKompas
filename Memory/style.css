@@ -2,14 +2,16 @@ Body {
     text-align: center;
 }
 
+/*Vlak met kaarten*/
 .grid {
     display: grid;
-    grid-template-columns: repeat(4, 120px);
-    gap: 10px;
+    grid-template-columns: repeat(4, 150px);
+    gap: 15px;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
+/*Kaarten*/
 .card {
     background: lightblue;
     padding: 20px;
@@ -20,4 +22,9 @@ Body {
 .matched {
     background: lightgreen;
     cursor: default;
+}
+
+/* Main */
+main {
+    padding-top: 10px;
 }
