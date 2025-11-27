@@ -9,7 +9,8 @@ Body {
     gap: 15px;
     justify-content: center;
     margin-top: 25px;
-    font-size: 10px;
+    font-size: 35px;
+    font-style: oblique;
 }
 
 /*Kaarten*/

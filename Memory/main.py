@@ -39,7 +39,7 @@ def render():
         elif i in flipped:
             div.innerText = card
         else:
-            div.innerText = " "
+            div.innerText = "Memory kaart"
         div.onclick = lambda e, i=i: flip_card(i)
         game_div.appendChild(div)
 
