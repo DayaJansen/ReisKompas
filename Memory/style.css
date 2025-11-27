@@ -1,0 +1,23 @@
+Body {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 120px);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card {
+    background: lightblue;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.matched {
+    background: lightgreen;
+    cursor: default;
+}
