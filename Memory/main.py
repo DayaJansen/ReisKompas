@@ -13,10 +13,6 @@ pairs = { "Vietnam": "Hanoi",
     "Cambodja": "Phnom Penh",
 }
 
-#Lijst met kaarten
-cards = list(pairs.keys()) + list(pairs.values())
-
-random.shuffle(cards)
 
 # Houd spelstatus bij
 cards = []
@@ -49,19 +45,20 @@ def render():
 
 
 def flip_card(i):
-    global flipped
-    if i in flipped or cards[i] in matched:
-        return
-    flipped.append(i)
+    global flipped 
     if len(flipped) == 2:
         check_match()
-    render()
+        render()
+    elif i not in flipped and cards[i] not in matched:
+        flipped.append(i)
+        render()
 
 def check_match():
     global flipped
+    if len(flipped) < 2:
+        return
     c1, c2 = flipped
     v1, v2 = cards[c1], cards[c2]
-    # Check of v1 en v2 een land-hoofdstad paar zijn
     if (v1 in pairs and pairs[v1] == v2) or (v2 in pairs and pairs[v2] == v1):
         matched.extend([v1, v2])
     flipped = []
