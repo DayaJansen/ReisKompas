@@ -56,3 +56,9 @@ a.linksintext {
     color: black;
     font-weight: bold;
 }
+
+a.linksintext:hover {
+    color: black;
+    font-style: italic;
+    font-weight: bold;
+}
