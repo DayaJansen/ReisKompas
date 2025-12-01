@@ -25,6 +25,10 @@ Body {
     cursor: default;
 }
 
+.revealed {
+    font-weight: bold;
+}
+
 /* Main */
 main {
     padding-top: 50px;
