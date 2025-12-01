@@ -66,6 +66,8 @@ def check_game():
             msg_div.innerText = "Geen match, probeer opnieuw."
         flipped = []
         render()
+    else:
+        msg_div.innerText = "Kies twee kaarten"
 
 #Reset-functie die game opnieuw start
 def reset_game():
