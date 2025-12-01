@@ -53,7 +53,7 @@ def flip_card(i):
         flipped.append(i)
         render()
 
-def check_game():
+def check_game(event=None):
     global flipped
     msg_div = document.getElementById("message")
     if len(flipped) == 2:
@@ -70,7 +70,7 @@ def check_game():
         msg_div.innerText = "Kies twee kaarten"
 
 #Reset-functie die game opnieuw start
-def reset_game():
+def reset_game(event=None):
     init_game()
 
 init_game()
