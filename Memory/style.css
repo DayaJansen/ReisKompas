@@ -29,9 +29,13 @@ Body {
     font-weight: bold;
 }
 
-/* Main */
+/* Main en footer*/
 main {
     padding-top: 50px;
+    background-color: rgb(245, 229, 215);
+}
+
+footer {
     background-color: rgb(245, 229, 215);
 }
 
