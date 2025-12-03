@@ -29,32 +29,40 @@
         <button py-click="check_game">Check</button>
         <button py-click="reset_game">Reset spel</button>
         <div id="message" class="message"></div>
-        <div id="game" class="grid"></div>
+        
+        
+        <!--container zodat de landen, grid van de memory en de hoofdsteden naast elkaar komen in plaats van onder elkaar-->
+        <div class="memory-container">
 
+            <div class="memorylanden">
+                <p>Landen:</p>
+                <p>Vietnam</p>
+                <p>Nepal</p>
+                <p>Kenia</p>
+                <p>Tanzania</p>
+                <p>Filipijnen</p>
+                <p>India</p>
+                <p>Ghana</p>
+                <p>Cambodja</p>
+            </div>
+
+            <div id="game" class="grid"></div>
+
+            <div class = "memorysteden">
+                <p>Hoofdsteden:</p>
+                <p>Hanoi</p>
+                <p>Kathmundu</p>
+                <p>Nairobi</p>  
+                <p>Dodoma</p>
+                <p>Manila</p>
+                <p>New Delhi</p>
+                <p>Accra</p>
+                <p>Phnom Penh</p>
+            </div>     
+        </div>
+        
         <py-script src="main.py"></py-script>
-        <div class="memorylanden">
-            <p>Landen:</p>
-            <p>Vietnam</p>
-            <p>Nepal</p>
-            <p>Kenia</p>
-            <p>Tanzania</p>
-            <p>Filipijnen</p>
-            <p>India</p>
-            <p>Ghana</p>
-            <p>Cambodja</p>
-        </div>
-        <div class = "memorysteden">
-            <p>Hoofdsteden:</p>
-            <p>Hanoi</p>
-            <p>Kathmundu</p>
-            <p>Nairobi</p>  
-            <p>Dodoma</p>
-            <p>Manila</p>
-            <p>New Delhi</p>
-            <p>Accra</p>
-            <p>Phnom Penh</p>
-        </div>
-    
+
     </main>
 
     <footer>
@@ -63,4 +71,3 @@
 </body>
 </html>
 
-<!--Ideeeeeee: verschillende memory's, eentje voor Azië, eentje voor Amerika, eentje voor Afrika, etc.-->

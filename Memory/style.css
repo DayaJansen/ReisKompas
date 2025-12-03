@@ -96,11 +96,18 @@ a.navlinks:hover {
     color: rgb(163, 115, 64)
 }
 
-/*Lijsten landen en hoofdsteden*/
-.memorylanden {
-    text-align: left;
+/*de memory-container*/
+.memory-container {
+    display: flex;
+    justify-content: space-between; /*verdeelt het in links, midden en rechts*/
+    align-items: flex-start; /*Alle blokken starten op dezelfde hoogte*/
+    margin-top: 30px;
 }
 
-.memorysteden {
-    text-align: right;
+.memorylanden, .memorysteden {
+    width: 150px;       /*Breedtes*/
+}
+
+.grid {
+    flex: 1; /*de grid (memory) neemt de resterende ruimte in*/
 }
