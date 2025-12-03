@@ -95,3 +95,12 @@ a.navlinks:hover {
     font-size: 25px;
     color: rgb(163, 115, 64)
 }
+
+/*Lijsten landen en hoofdsteden*/
+.memorylanden {
+    text-align: left;
+}
+
+.memorysteden {
+    text-align: right;
+}
