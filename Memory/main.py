@@ -56,7 +56,11 @@ def flip_card(i):
 def check_game(event=None):
     global flipped
     msg_div = document.getElementById("message")
-    if len(flipped) == 2:
+    if len(matched) == len(cards):
+        msg_div.innerText = "Je hebt alles gevonden! Het spel start opnieuw"
+        reset_game()
+        return
+    elif len(flipped) == 2:
         c1, c2 = flipped
         v1, v2 = cards[c1], cards[c2]
         if (v1 in pairs and pairs[v1] == v2) or (v2 in pairs and pairs[v2] == v1):

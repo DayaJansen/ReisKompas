@@ -39,6 +39,7 @@ main {
 Body{
     font-family: 'Times New Roman', Times, serif;
     background-color: rgb(245, 229, 215);
+    font-size: 20px;
 }
 
 /* plaatje */ 
@@ -93,4 +94,13 @@ a.navlinks:hover {
 .button {
     font-size: 25px;
     color: rgb(163, 115, 64)
+}
+
+/*Lijsten landen en hoofdsteden*/
+.memorylanden {
+    text-align: left;
+}
+
+.memorysteden {
+    text-align: right;
 }
