@@ -106,6 +106,7 @@ a.navlinks:hover {
 
 .memorylanden, .memorysteden {
     width: 150px;       /*Breedtes*/
+    font-weight: bold;
 }
 
 .grid {
