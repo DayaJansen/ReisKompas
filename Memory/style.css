@@ -112,3 +112,7 @@ a.navlinks:hover {
 .grid {
     flex: 1; /*de grid (memory) neemt de resterende ruimte in*/
 }
+
+.lijntjeeronder {
+    text-decoration: underline;
+}
