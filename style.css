@@ -48,11 +48,11 @@ main {
 /*Body*/
 Body{
     font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
 }
 
 /* linkje naar memory */ 
 a.linksintext {
-    text-decoration: none;
     color: black;
     font-weight: bold;
 }
