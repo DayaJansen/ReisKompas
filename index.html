@@ -10,6 +10,129 @@
 </head>
 
 <body>
+    <!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8" />
+<title>Land Roulette</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    #wheel {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        border: 8px solid #333;
+        position: relative;
+        overflow: hidden;
+        transform: rotate(0deg);
+        transition: transform 4s cubic-bezier(0.33, 1, 0.68, 1);
+    }
+
+    #pointer {
+        width: 0; 
+        height: 0; 
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 30px solid red;
+        margin-bottom: 10px;
+    }
+
+    .slice {
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        top: 50%;
+        left: 50%;
+        transform-origin: 0% 0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+        text-shadow: 1px 1px 3px black;
+    }
+
+    button {
+        padding: 10px 25px;
+        font-size: 18px;
+        margin-top: 25px;
+        cursor: pointer;
+    }
+
+    #result {
+        margin-top: 25px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+
+<div id="pointer"></div>
+
+<div id="wheel"></div>
+
+<button onclick="spin()">Spin!</button>
+
+<div id="result"></div>
+
+
+<script>
+    const countries = [
+        "Japan", "Italië", "Spanje", "Marokko", 
+        "Thailand", "Canada", "Zuid-Korea", "India"
+    ];
+
+    const colors = [
+        "#FF5733", "#FFC300", "#DAF7A6", "#FF5733", 
+        "#C70039", "#900C3F", "#581845", "#1ABC9C"
+    ];
+
+    const wheel = document.getElementById("wheel");
+
+    // Slices maken
+    const sliceAngle = 360 / countries.length;
+
+    countries.forEach((country, i) => {
+        const slice = document.createElement("div");
+        slice.className = "slice";
+        slice.style.background = colors[i];
+        slice.style.transform = `rotate(${sliceAngle * i}deg) skewY(${90 - sliceAngle}deg)`;
+        slice.textContent = country;
+        wheel.appendChild(slice);
+    });
+
+    let currentRotation = 0;
+
+    function spin() {
+        const randomIndex = Math.floor(Math.random() * countries.length);
+        const finalRotation = 360 * 5 + (360 - randomIndex * sliceAngle - sliceAngle / 2);
+
+        currentRotation = finalRotation;
+
+        wheel.style.transform = `rotate(${currentRotation}deg)`;
+        
+        // Resultaat tonen na draaien
+        setTimeout(() => {
+            document.getElementById("result").textContent = 
+                "Bestemming: " + countries[randomIndex];
+        }, 4000);
+    }
+</script>
+
+</body>
+</html>
+
     <div class="header-image">
         <img src="Plaatjes/Homeplaatje.png" alt="Header afbeelding"> <!-- Bron van het plaatje: https://pixers.nl/fotobehang/vintage-kaart-reis-en-kompas-met-oude-stof-textuur-achtergrond-achtergrond-avontuur-95358395 -->
     </div>
