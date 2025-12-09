@@ -25,22 +25,18 @@
         </div>
     </main>
 
-<script>
+    <script>
         function spinRoulette() {
             const landen = [
-                "Mexico",
-                "Peru",
-                "Venezuela",
-                "India"
+                "Vietnam", "India", "Marokko", "Peru", "Ghana",
+                "Bolivia", "Jordanie", "Nepal",
+                "Kenia", "Tanzania", "Filipijnen", "Mexico"
             ];
 
             const random = landen[Math.floor(Math.random() * landen.length)];
-
-            // Redirect to the correct page inside /places/
-            window.location.href = "places/" + random + ".html";
+            document.getElementById("resultaat").textContent = random;
         }
     </script>
 
 </body>
 </html>
-
