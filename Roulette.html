@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>ReisKompas - Random Bestemming</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="menu">
+        <a class="navlinks" href="index.html">Home</a>
+        <a class="navlinks" href="Relaxvakanties.html">Relaxte vakanties</a>
+        <a class="navlinks" href="Uitgaanvakanties.html">Feestvakanties</a>
+        <a class="navlinks" href="Actief.html">Actieve vakanties</a>
+        <a class="navlinks" href="Cultuur.html">Culturele vakanties</a>
+    </nav>
+
+    <main>
+        <h1>Willekeurige bestemming</h1>
+        <p>Klik op de knop en laat je verrassen!</p>
+
+        <div id="roulette-container">
+            <button onclick="spinRoulette()">🎡 Klik voor een random bestemming</button>
+            <h2 id="resultaat"></h2>
+        </div>
+    </main>
+
+    <script>
+        function spinRoulette() {
+            const landen = [
+                "Vietnam", "India", "Marokko", "Peru", "Ghana",
+                "Bolivia", "Jordanie", "Nepal",
+                "Kenia", "Tanzania", "Filipijnen", "Mexico"
+            ];
+
+            const random = landen[Math.floor(Math.random() * landen.length)];
+            document.getElementById("resultaat").textContent = random;
+        }
+    </script>
+
+</body>
+</html>
+
