@@ -26,12 +26,11 @@
     <main>
         <h1>Memoryspel</h1>  
         <h2>Landen en hoofdsteden</h2>  
-        <button py-click="check_game">Check</button>
-        <button py-click="reset_game">Reset spel</button>
-        <div id="message" class="message"></div>
+        <button py-click="reset_game">Reset spel</button> <!--Knop waarmee je het spel reset-->
+        <div id="message" class="message"></div> <!--Een bericht die hij teruggeeft zodra je op check drukt (of het een match is of niet)-->
         
         
-        <!--container zodat de landen, grid van de memory en de hoofdsteden naast elkaar komen in plaats van onder elkaar-->
+        <!--container zodat de landen, kader van de memory en de hoofdsteden naast elkaar komen in plaats van onder elkaar-->
         <div class="memory-container">
 
             <div class="memorylanden">
@@ -46,7 +45,7 @@
                 <p>Cambodja</p>
             </div>
 
-            <div id="game" class="grid"></div>
+            <div id="game" class="grid"></div> <!--het kader van de memory-->
 
             <div class = "memorysteden">
                 <p class="lijntjeeronder">Hoofdsteden:</p>
@@ -61,7 +60,7 @@
             </div>     
         </div>
         
-        <py-script src="main.py"></py-script>
+        <py-script src="main.py"></py-script> <!--link naar de pagina met de python-code-->
 
     </main>
 

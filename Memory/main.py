@@ -1,4 +1,4 @@
-from js import document
+from js import document, setTimeout
 import random
 
 
@@ -49,23 +49,24 @@ def flip_card(i):
     global flipped
     if i in flipped or cards[i] in matched:
         return
-    if len(flipped) < 2:   # Je mag maximaal twee kaarten omdraaien
+    elif len(flipped) < 2:   # Je mag maximaal twee kaarten omdraaien
         flipped.append(i)
         render()
+    elif len(flipped) == 2:
+        setTimeout(lambda: check_match(), 3000)
 
 def check_game(event=None):
     global flipped
     msg_div = document.getElementById("message")
-    if len(matched) == len(cards):
-        msg_div.innerText = "Je hebt alles gevonden! Het spel start opnieuw"
-        reset_game()
-        return
-    elif len(flipped) == 2:
+    if len(flipped) == 2:
         c1, c2 = flipped
         v1, v2 = cards[c1], cards[c2]
         if (v1 in pairs and pairs[v1] == v2) or (v2 in pairs and pairs[v2] == v1):
             matched.extend([v1, v2])
             msg_div.innerText = "Goed gedaan! Dat is een match."
+        elif len(matched) == len(cards):
+            msg_div.innerText = "Je hebt alle paren gevonden! Het spel start opnieuw."
+            reset_game()
         else:
             msg_div.innerText = "Geen match, probeer opnieuw."
         flipped = []

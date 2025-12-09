@@ -64,3 +64,8 @@ a.linksintext:hover {
     font-style: italic;
     font-weight: bold;
 }
+
+/*footer*/
+footer {
+    padding-left: 20px;
+}
