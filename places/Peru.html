@@ -18,6 +18,15 @@
         <button id="spinAgainBtn" class="spin-again-btn">🎡 Spin again</button>
         <h2 id="resultaat"></h2>   
     </main>
+<script>
+const landen = ["Vietnam", "India", "Peru", "Ghana",
+                "Bolivia", "Jordanie", "Nepal", 
+                "Kenia", "Mexico", "Congo", "Zimbabwe"]; // lijst van alle landen
 
+document.getElementById("spinAgainBtn").addEventListener("click", function() {
+    const random = landen[Math.floor(Math.random() * landen.length)];
+    window.location.href = "../places/" + random + ".html"; // redirect naar nieuw land
+});
+</script>
 </body>
 </html>
