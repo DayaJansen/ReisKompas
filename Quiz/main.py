@@ -48,8 +48,8 @@ def bepaal_resultaat(event):
         scores["Tanzania"] += 2
         scores["Filipijnen"] += 2
         scores["Cambodja"] += 2
-        scores ["India"] += 2
-        scores ["Ghana"] += 2
+        scores["India"] += 2
+        scores["Ghana"] += 2
 
     # --- Vraag 3: Wat zoekt u op vakantie? ---
     if antwoord3 == "actief":
