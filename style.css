@@ -83,3 +83,20 @@ footer {
     border-radius: 14px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
+
+.spin-again-btn {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.spin-again-btn:hover {
+    background-color: #ff3b2f;
+    transform: scale(1.05);
+}
