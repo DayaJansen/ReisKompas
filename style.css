@@ -44,6 +44,10 @@ a.navlinks:hover {
 main {
     padding-top: 10px;
     padding-left: 20px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
 /*Body*/
@@ -70,11 +74,12 @@ footer {
     padding-left: 20px;
 }
 
-/*Mexico plaatje*/
+/*Plaatje*/
 .destination-img {
-    max-width: 400px;
-    width: 100%;
-    border-radius: 12px;
-    margin: 20px 0;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    display: block;
+    margin: 30px auto;     
+    width: 70%;           
+    max-width: 600px;      
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
