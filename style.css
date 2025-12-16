@@ -85,7 +85,7 @@ footer {
 }
 
 .spin-again-btn {
-    background-color: #ff6f61;
+    background-color: #D6893E;
     color: white;
     border: none;
     padding: 15px 30px;
@@ -97,6 +97,6 @@ footer {
 }
 
 .spin-again-btn:hover {
-    background-color: #ff3b2f;
+    background-color: #D6893E;
     transform: scale(1.05);
 }
