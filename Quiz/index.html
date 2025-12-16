@@ -1,0 +1,90 @@
+<!-- Document verstaanbaar maken voor browser -->
+<!DOCTYPE html>
+<html lang="nl">
+<!-- Informatie over de pagina -->
+<head>
+    <!-- Tekencodering van de pagina -->
+    <meta charset="UTF-8">
+    <title>ReisKompas Quiz</title>
+    <!-- CSS-bestand koppelen aan HTML -->
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS-bestand ophalen van de Pyscript website -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.3.1/core.css" />
+    <!-- Javascript-bestand ophalen van de Pyscript website -->
+    <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
+</head>
+<body>
+    <h1>ReisKompas Quiz</h1>
+    <!-- Quiz formulier benoemen-->
+    <form id="quizForm">
+        <!-- Vragen benoemen en schrijven -->
+        <!-- Vraag 1 -->
+        <label for="vraag1">1. Hoe lang wilt u op vakantie? </label><br>
+       <!-- Keuze menu voor antwoorden vraag en antwoorden benoemen -->
+        <select id="vraag1">
+            <option value="weekend">1 weekend</option>
+            <option value="week">1 week</option>
+            <option value="2weken">2 weken</option>
+            <option value="lang">3 weken of langer</option>
+        </select><br><br>
+
+        <!-- Vraag 2 -->
+        <label for="vraag2">2. Hoe ver wilt u reizen?</label><br>
+        <select id="vraag2">
+            <option value="geen">Geen voorkeur</option>
+            <option value="binnenNL">Binnen Nederland</option>
+            <option value="binnenEU">Binnen Europa</option>
+            <option value="buitenEU">Buiten Europa</option>
+        </select><br><br>
+
+        <!-- Vraag 3 -->
+        <label for="vraag3">3. Wat zoekt u op een vakantie?</label><br>
+        <select id="vraag3">
+            <option value="actief">Actieve vakantie</option>
+            <option value="relax">Relaxende vakantie</option>
+            <option value="cultuur">Culturele vakantie</option>
+            <option value="feest">Feestvakantie</option>
+        </select><br><br>
+
+        <!-- Vraag 4 -->
+        <label for="vraag4">4. Welk weer spreekt u het meeste aan?</label><br>
+        <select id="vraag4">
+            <option value="sneeuw">Sneeuw met een warm en knus verblijf</option>
+            <option value="zon">Stralende zon met verkoelende waters</option>
+            <option value="gematigd">Verfrissende tussen-temperaturen</option>
+            <option value="geen">Geen voorkeur</option>
+        </select><br><br>
+
+        <!-- Vraag 5 -->
+        <label for="vraag5">5. Met wie wilt u graag op vakantie?</label><br>
+        <select id="vraag5">
+            <option value="alleen">Alleen</option>
+            <option value="koppel">Als koppel</option>
+            <option value="kinderen">Familie met jonge kinderen</option>
+            <option value="pubers">Familie met pubers</option>
+            <option value="jongeren">Met jonge vrienden</option>
+            <option value="volwassenen">Met volwassen vrienden</option>
+            <option value="groep">Met een groep onbekende mensen</option>
+        </select><br><br>
+
+        <!-- Vraag 6 -->
+        <label for="vraag6">6. Waarin verblijft u het liefste?</label><br>
+        <select id="vraag6">
+            <option value="resort">Luxe resort/hotel</option>
+            <option value="hostel">(Jeugd)hostel of B&B</option>
+            <option value="tent">(Safari)tent/natuurhuisje</option>
+            <option value="airbnb">Huurhuis (Airbnb)</option>
+        </select><br><br>
+
+        <!-- Knop om de quiz in te dienen-->
+        <button type="button" id="submitBtn">Verstuur</button>
+    </form>
+
+    <!-- Titel en containter voor het resultaat -->
+    <h2>Jouw resultaat:</h2>
+    <div id="resultaat"></div>
+
+    <!-- Koppelen phyton code, main-py, aan de HTML-pagina -->
+    <py-script src="main.py"></py-script>
+</body>
+</html>
