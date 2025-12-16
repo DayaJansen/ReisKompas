@@ -15,10 +15,19 @@
         <h1>Congo</h1>
         <img src="../Plaatjes/congo.jpg" alt="Congo" style="max-width:400px; border-radius:10px;">
         <p>Congo is een land in Afrika met uitgestrekte regenwouden en een enorme biodiversiteit. Het staat bekend om zijn machtige rivier, rijke natuurlijke hulpbronnen en diverse culturen.</p>
-        <a href="../Random.html">
-           <button class="spin-again-btn">🎡 Spin again</button>
-        </a> 
+        <button id="spinAgainBtn" class="spin-again-btn">🎡 Spin again</button>
+        <h2 id="resultaat"></h2>
     </main>
+<script>
+const landen = ["Vietnam", "India", "Peru", "Ghana",
+                "Bolivia", "Jordanie", "Nepal", 
+                "Kenia", "Mexico", "Congo", "Zimbabwe"]; // lijst van alle landen
+
+document.getElementById("spinAgainBtn").addEventListener("click", function() {
+    const random = landen[Math.floor(Math.random() * landen.length)];
+    window.location.href = "../places/" + random + ".html"; // redirect naar nieuw land
+});
+</script>
 
 </body>
 </html>
