@@ -1,7 +1,7 @@
 # Document ophalen van javascript naar python
 from js import document
 
-def bepaal_resultaat(event):
+def bepaal_resultaat(event=None):
     # Scoretabel voor bestemmingen
     scores = {
         "Vietnam": 0,
@@ -123,7 +123,7 @@ def bepaal_resultaat(event):
     resultaat = max(scores, key=scores.get)
 
     # Resultaat tonen in HTML
-    document.getElementById("resultaat").innerText = f"Jouw resultaat is: {resultaat}"
+    document.getElementById("resultaat").innerText = "Jouw resultaat is: str{resultaat}"
 
 # Koppel de knop aan de functie
 document.getElementById("submitBtn").addEventListener("click", bepaal_resultaat)
