@@ -123,8 +123,5 @@ def bepaal_resultaat(event=None):
     resultaat = max(scores, key=scores.get)
 
     # Resultaat tonen in HTML
-    document.getElementById("resultaat").innerText = "Jouw resultaat is: str{resultaat}"
-
-# Koppel de knop aan de functie
-document.getElementById("submitBtn").addEventListener("click", bepaal_resultaat)
+    document.getElementById("resultaat").innerText = f"Jouw resultaat is: {resultaat}"
 
