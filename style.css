@@ -15,9 +15,8 @@
 .menu {
     position: sticky;
     top:0;
-    width: 100%;
+    box-sizing: border-box;
     background: burlywood;
-    padding: 25px;
     font-size: 25px;
     font-weight: 500;
     text-align: center;
