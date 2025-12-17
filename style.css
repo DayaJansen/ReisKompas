@@ -103,18 +103,15 @@ footer {
 }
 
 /*Relaxvakanties pagina*/
-.europa {
-    text-align: left;
+.container_relaxvakanties {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*twee kolommen*/
+    gap: 20px; /*ruimte tussen de blokken*/
 }
 
-.afrika {
-    text-align: right;
+.container_relaxvakanties > div {
+    border: 1px solid #ccc;
+    padding: 10px;
 }
 
-.amerika {
-    text-align: left;
-}
 
-.azie {
-     text-align: right;
-}
