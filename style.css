@@ -44,7 +44,6 @@ a.navlinks:hover {
 main {
     padding-top: 10px;
     padding-left: 20px;
-    text-align: center;
     max-width: 900px;
     margin: 0 auto;
     padding: 40px 20px;
@@ -99,4 +98,11 @@ footer {
 .spin-again-btn:hover {
     background-color: #D6893E;
     transform: scale(1.05);
+}
+
+.roulette-page {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
