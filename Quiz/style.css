@@ -1,0 +1,82 @@
+/* Body */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    background-color: rgb(245, 229, 215);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Titel */
+h1 {
+    margin-top: 30px;
+    font-size: 40px;
+    color: rgb(37, 97, 41);
+    text-decoration: underline;
+}
+
+/* Subtitel */
+h2 {
+    margin-top: 40px;
+    font-size: 28px;
+    color: rgb(163, 115, 64);
+}
+
+/* Quizformulier */
+form {
+    max-width: 600px;
+    margin: 30px auto;
+    background: burlywood;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    text-align: left;
+}
+
+/* Vragen */
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    color: rgb(37, 97, 41);
+}
+
+/* Antwoorden */
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    background-color: #fff8f0;
+    font-size: 18px;
+}
+
+/* Knop */
+button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background-color: rgb(163, 115, 64);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(120, 85, 45);
+}
+
+/* Resultaat */
+#resultaat {
+    margin-top: 25px;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(37, 97, 41);
+    text-align: center;
+}
