@@ -94,3 +94,15 @@ footer {
     height: 210px;
     width: auto;
 }
+
+/*Relaxte vakanties pagina*/
+.container_relaxvakanties {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*twee kolommen*/
+    gap: 25px; /*ruimte tussen de blokken*/
+}
+
+.container_relaxvakanties > div {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
