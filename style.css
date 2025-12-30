@@ -99,10 +99,9 @@ footer {
 .container_relaxvakanties {
     display: grid;
     grid-template-columns: 1fr 1fr; /*twee kolommen*/
-    gap: 25px; /*ruimte tussen de blokken*/
+    gap: 40px; /*ruimte tussen de blokken*/
 }
 
-.container_relaxvakanties > div {
-    border: 1px solid #ccc;
-    padding: 10px;
+.container_relaxvakanties > div {   /*Hierbij worden alle divs gepakt binnen de container (de continenten)*/
+    padding: 20px;
 }
