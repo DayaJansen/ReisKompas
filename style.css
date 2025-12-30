@@ -103,5 +103,6 @@ footer {
 }
 
 .container_relaxvakanties > div {   /*Hierbij worden alle divs gepakt binnen de container (de continenten)*/
+    border: 1px solid #ccc;  /*randje om de vakken van de continenten*/
     padding: 20px;
 }
