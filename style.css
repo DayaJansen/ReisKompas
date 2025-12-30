@@ -106,3 +106,8 @@ footer {
     border: 1px solid #ccc;  /*randje om de vakken van de continenten*/
     padding: 20px;
 }
+
+.relaxvakantie_plaatjes {
+    width: 200px;
+    height: 150px;
+}
