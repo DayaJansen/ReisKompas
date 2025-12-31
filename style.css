@@ -21,7 +21,6 @@
     padding: 15px 30px;
     display: flex;
     align-items: center;
-    
     font-size: 25px;
     font-weight: 500;
     text-align: center;
@@ -51,7 +50,6 @@ main {
     padding-left: 20px;
     max-width: 900px;
     margin: 0 auto;
-    padding: 40px 20px;
 }
 
 /*Body*/
@@ -77,6 +75,7 @@ a.linksintext:hover {
 /*footer*/
 footer {
     padding-left: 20px;
+    text-align: center;
 }
 
 /*Plaatje random bestemmingen generator*/
@@ -93,4 +92,21 @@ footer {
     margin-right: 30px;
     height: 210px;
     width: auto;
+}
+
+/*Relaxte vakanties pagina*/
+.container_relaxvakanties {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*twee kolommen*/
+    gap: 50px; /*ruimte tussen de blokken*/
+}
+
+.container_relaxvakanties > div {   /*Hierbij worden alle divs gepakt binnen de container (de continenten)*/
+    border: 1px solid #ccc;  /*randje om de vakken van de continenten*/
+    padding: 20px;
+}
+
+.relaxvakantie_plaatjes {
+    width: 350px;
+    height: 300px;
 }
