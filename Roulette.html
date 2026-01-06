@@ -26,16 +26,39 @@
     </main>
 
     <script>
-        function spinRoulette() {
-            const landen = [
-                "Vietnam", "India", "Peru", "Ghana",
-                "Bolivia", "Jordanie", "Nepal", 
-                "Kenia", "Mexico", "Congo", "Zimbabwe",  
-            ];
+          const alleLanden = [
+        "Vietnam", "India", "Peru", "Ghana",
+        "Bolivia", "Jordanie", "Nepal",
+        "Kenia", "Mexico", "Congo", "Zimbabwe"
+    ];
 
-            const random = landen[Math.floor(Math.random() * landen.length)];
-            window.location.href = "places/" + random + ".html";
+    function spinRoulette() {
+        // Haal eerder gebruikte landen op (of lege array)
+        let gebruikteLanden = JSON.parse(localStorage.getItem("gebruikteLanden")) || [];
+
+        // Filter landen die nog niet zijn geweest
+        let beschikbareLanden = alleLanden.filter(
+            land => !gebruikteLanden.includes(land)
+        );
+
+        // Als alles al geweest is → reset
+        if (beschikbareLanden.length === 0) {
+            gebruikteLanden = [];
+            beschikbareLanden = [...alleLanden];
         }
+
+        // Kies random uit overgebleven landen
+        const randomLand = beschikbareLanden[
+            Math.floor(Math.random() * beschikbareLanden.length)
+        ];
+
+        // Voeg toe aan gebruikte landen
+        gebruikteLanden.push(randomLand);
+        localStorage.setItem("gebruikteLanden", JSON.stringify(gebruikteLanden));
+
+        // Ga naar de landpagina
+        window.location.href = "places/" + randomLand + ".html";
+    }
     </script>
 
 </body>
