@@ -1,5 +1,5 @@
 # Document ophalen van javascript naar python
-from js import document
+from js import document, setTimeout   # setTimeout toegevoegd voor confetti-timer
 
 def bepaal_resultaat(event=None):
     # Scoretabel voor bestemmingen
@@ -40,7 +40,7 @@ def bepaal_resultaat(event=None):
     if antwoord2 == "binnenNL":
         pass
     elif antwoord2 == "binnenEU":
-       pass
+        pass
     elif antwoord2 == "buitenEU":
         scores["Vietnam"] += 2
         scores["Nepal"] += 2
@@ -125,3 +125,11 @@ def bepaal_resultaat(event=None):
     # Resultaat tonen in HTML
     document.getElementById("resultaat").innerText = f"Jouw resultaat is: {resultaat}"
 
+    # Confetti laten zien 
+    document.getElementById("confetti").style.display = "block"
+
+    # Confetti na 4 seconden weer weg
+    def hide_confetti():
+        document.getElementById("confetti").style.display = "none"
+
+    setTimeout(hide_confetti, 4000)
