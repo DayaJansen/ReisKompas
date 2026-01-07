@@ -74,7 +74,7 @@ button:hover {
 
 /* Resultaat */
 #resultaat {
-    margin-top: 20px; /* iets minder */
+    margin-top: 20px;
     font-size: 22px;
     font-weight: bold;
     color: rgb(37, 97, 41);
@@ -83,8 +83,9 @@ button:hover {
 
 /* Opnieuw-knop */
 #opnieuwBtn {
-    margin: 20px auto; /* ruimte boven en onder */
-    max-width: 600px;  /* zelfde breedte als formulier */
+    display: none;
+    margin: 20px auto;
+    max-width: 600px;
 }
 
 /* Hoofdbalk + header afbeelding */
@@ -135,13 +136,12 @@ main {
 
 /* Confetti */
 #confetti {
-    display: none; /* onzichtbaar bij openen */
-    position: fixed; /* blijft bovenaan hangen */
+    display: none;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    pointer-events: none; /* niet op klikken */
-    z-index: 9999; /* boven alles */
+    pointer-events: none;
+    z-index: 9999;
 }
-
 
