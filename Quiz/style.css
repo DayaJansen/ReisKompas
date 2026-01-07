@@ -26,7 +26,7 @@ h2 {
 /* Quizformulier */
 form {
     max-width: 600px;
-    margin: 20px auto; 
+    margin: 10px auto; 
     background: burlywood;
     padding: 25px;
     border-radius: 10px;
@@ -124,7 +124,7 @@ a.navlinks:hover {
 
 /* Main */
 main {
-    padding-top: 20px; 
+    padding-top: 10px; 
 }
 
 #confetti {
