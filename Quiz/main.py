@@ -1,5 +1,10 @@
-# Document ophalen van javascript naar python
-from js import document, setTimeout   # setTimeout toegevoegd voor confetti-timer
+# Document ophalen van javascript naar python en setTimeout voor confetti
+from js import document, setTimeout   
+
+# Confetti verbergen 
+def hide_confetti():
+    document.getElementById("confetti").style.display = "none"
+
 
 def bepaal_resultaat(event=None):
     # Scoretabel voor bestemmingen
@@ -129,7 +134,4 @@ def bepaal_resultaat(event=None):
     document.getElementById("confetti").style.display = "block"
 
     # Confetti na 4 seconden weer weg
-    def hide_confetti():
-        document.getElementById("confetti").style.display = "none"
-
     setTimeout(hide_confetti, 4000)
