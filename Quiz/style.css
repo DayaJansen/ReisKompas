@@ -81,6 +81,12 @@ button:hover {
     text-align: center;
 }
 
+/* Opnieuw-knop */
+#opnieuwBtn {
+    margin: 20px auto; /* ruimte boven en onder */
+    max-width: 600px;  /* zelfde breedte als formulier */
+}
+
 /* Hoofdbalk + header afbeelding */
 .header-image {
     position: relative;
@@ -127,6 +133,7 @@ main {
     padding-top: 10px; 
 }
 
+/* Confetti */
 #confetti {
     display: none; /* onzichtbaar bij openen */
     position: fixed; /* blijft bovenaan hangen */
@@ -136,4 +143,5 @@ main {
     pointer-events: none; /* niet op klikken */
     z-index: 9999; /* boven alles */
 }
+
 
