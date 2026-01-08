@@ -95,7 +95,7 @@ footer {
 }
 
 /*Type vakanties pagina's*/
-.container_relaxvakanties {
+.container_type_vakanties {
     display: grid;
     grid-template-columns: 1fr 1fr; /*twee kolommen*/
     gap: 50px; /*ruimte tussen de blokken*/
