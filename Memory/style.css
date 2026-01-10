@@ -85,6 +85,13 @@ a.navlinks:hover {
     font-size: 20px;
 }
 
+/*Logo in menubalk*/
+#logo img {
+    margin-right: 30px;
+    height: 210px;
+    width: auto;
+}
+
 /*bericht*/
 .message {
     margin: 10px;
