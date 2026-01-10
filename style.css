@@ -2,6 +2,8 @@
 .header-image {
     position: relative;
     height: 450px; 
+    width: 100vw; 
+    margin: 0;
 }
 
 .header-image img {
@@ -58,6 +60,8 @@ Body{
     font-size: 20px;
     background-color: rgb(245, 229, 215);
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 /* linkje naar memory */ 
