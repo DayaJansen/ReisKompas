@@ -27,7 +27,10 @@
 
 /* Main*/
 main {
-    padding-top: 50px;
+    padding-top: 10px;
+    padding-left: 20px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 
