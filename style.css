@@ -88,25 +88,26 @@ footer {
     box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
+/*Logo in menubalk*/
 #logo img {
     margin-right: 30px;
     height: 210px;
     width: auto;
 }
 
-/*Relaxte vakanties pagina*/
-.container_relaxvakanties {
+/*Type vakanties pagina's*/
+.container_type_vakanties {
     display: grid;
     grid-template-columns: 1fr 1fr; /*twee kolommen*/
     gap: 50px; /*ruimte tussen de blokken*/
 }
 
-.container_relaxvakanties > div {   /*Hierbij worden alle divs gepakt binnen de container (de continenten)*/
+.container_type_vakanties > div {   /*Hierbij worden alle divs gepakt binnen de container (de continenten)*/
     border: 1px solid #ccc;  /*randje om de vakken van de continenten*/
     padding: 20px;
 }
 
-.relaxvakantie_plaatjes {
+.type_vakanties_plaatjes {
     width: 350px;
     height: 300px;
 }
