@@ -43,7 +43,7 @@ Body{
 /* plaatje */ 
 .header-image {
     position: relative;
-    height: 450px;
+    height: 450px; 
 }
 
 .header-image img {
