@@ -79,9 +79,10 @@ a.linksintext:hover {
 /*Plaatje overtourisme op homepagina*/
 .Homepagina_overtourisme {
     float: right; 
-    width: 200px; /* grootte van het plaatje */ 
-    margin-left: 15px; /* ruimte tussen tekst en plaatje */ 
-    margin-bottom: 10px;
+    width: 500px; /* grootte van het plaatje */ 
+    margin-left: 40px; /* ruimte tussen tekst en plaatje */ 
+    margin-bottom: 15px;
+    border-color: black;
 }
 
 /*footer*/
