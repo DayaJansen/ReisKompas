@@ -76,6 +76,14 @@ a.linksintext:hover {
     font-weight: bold;
 }
 
+/*Plaatje overtourisme op homepagina*/
+.Homepagina_overtourisme {
+    float: right; 
+    width: 200px; /* grootte van het plaatje */ 
+    margin-left: 15px; /* ruimte tussen tekst en plaatje */ 
+    margin-bottom: 10px;
+}
+
 /*footer*/
 footer {
     padding-left: 20px;
