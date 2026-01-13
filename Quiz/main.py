@@ -4,14 +4,49 @@ from js import document, setTimeout
 def bepaal_resultaat(event=None):
     # Scoretabel voor bestemmingen
     scores = {
+        # Azië
         "Vietnam": 0,
         "Nepal": 0,
+        "India": 0,
+        "Filipijnen": 0,
+        "Cambodja": 0,
+        "Thailand": 0,
+        "Indonesië": 0,
+        "Laos": 0,
+        "Kirgistan": 0,
+        "Oezbekistan": 0,
+        "Iran": 0,
+        "Georgië": 0,
+        "Armenië": 0,
+
+        # Afrika
         "Kenia": 0,
         "Tanzania": 0,
-        "Filipijnen": 0,
-        "India": 0,
         "Ghana": 0,
-        "Cambodja": 0
+        "Egypte": 0,
+        "Seychellen": 0,
+        "Marokko": 0,
+        "Oeganda": 0,
+        "Zuid-Afrika": 0,
+
+        # Europa
+        "Kreta": 0,
+        "Cyprus": 0,
+        "Spanje": 0,
+        "Oostenrijk": 0,
+        "Frankrijk": 0,
+
+        # Amerika
+        "Mexico": 0,
+        "Jamaica": 0,
+        "Brazilië": 0,
+        "Guyana": 0,
+        "Peru": 0,
+        "Bolivia": 0,
+        "Canada": 0,
+
+        # Midden-Oosten
+        "Jordanië": 0,
     }
 
     # Antwoorden van de HTML halen
@@ -22,102 +57,153 @@ def bepaal_resultaat(event=None):
     antwoord5 = document.getElementById("vraag5").value
     antwoord6 = document.getElementById("vraag6").value
 
-    # --- Vraag 1: Hoe lang wilt u op vakantie? ---
+    # -------------------------------
+    # --- Vraag 1: Duur vakantie ---
+    # -------------------------------
     if antwoord1 == "weekend":
-        scores["Ghana"] += 2
-    elif antwoord1 == "week":
-        scores["India"] += 2
-        scores["Cambodja"] += 1
-    elif antwoord1 == "2weken":
-        scores["Vietnam"] += 2
-        scores["Nepal"] += 2
-    elif antwoord1 == "lang":
-        scores["Tanzania"] += 2
-        scores["Kenia"] += 2
-        scores["Filipijnen"] += 2
+        # korte trips → vooral Europa
+        for land in ["Kreta", "Cyprus", "Spanje", "Oostenrijk", "Frankrijk"]:
+            scores[land] += 2
 
-    # --- Vraag 2: Hoe ver wilt u reizen? ---
+    elif antwoord1 == "week":
+        for land in ["Kreta", "Cyprus", "Spanje", "Oostenrijk", "Frankrijk"]:
+            scores[land] += 2
+
+    elif antwoord1 == "2weken":
+        for land in [
+            "Vietnam", "Nepal", "Kenia", "Tanzania", "Filipijnen", "India",
+            "Cambodja", "Thailand", "Indonesië", "Laos", "Marokko",
+            "Egypte", "Seychellen", "Mexico", "Jamaica", "Brazilië",
+            "Guyana", "Peru", "Bolivia", "Oeganda", "Zuid-Afrika",
+            "Georgië", "Armenië", "Iran", "Oezbekistan", "Kirgistan"
+        ]:
+            scores[land] += 2
+
+    elif antwoord1 == "lang":
+        # lange reizen → verre bestemmingen
+        for land in [
+            "Vietnam", "Nepal", "Kenia", "Tanzania", "Filipijnen", "India",
+            "Cambodja", "Thailand", "Indonesië", "Laos", "Seychellen",
+            "Mexico", "Jamaica", "Brazilië", "Guyana", "Peru", "Bolivia",
+            "Oeganda", "Zuid-Afrika", "Canada", "Iran", "Oezbekistan",
+            "Kirgistan", "Georgië", "Armenië", "Jordanië"
+        ]:
+            scores[land] += 2
+
+    # -------------------------------
+    # --- Vraag 2: Afstand ---
+    # -------------------------------
     if antwoord2 == "binnenNL":
         pass
+
     elif antwoord2 == "binnenEU":
-        pass
+        for land in ["Kreta", "Cyprus", "Spanje", "Oostenrijk", "Frankrijk", "Georgië", "Armenië"]:
+            scores[land] += 2
+
     elif antwoord2 == "buitenEU":
-        scores["Vietnam"] += 2
-        scores["Nepal"] += 2
-        scores["Kenia"] += 2
-        scores["Tanzania"] += 2
-        scores["Filipijnen"] += 2
-        scores["Cambodja"] += 2
-        scores["India"] += 2
-        scores["Ghana"] += 2
+        for land in scores:
+            if land not in ["Kreta", "Cyprus", "Spanje", "Oostenrijk", "Frankrijk"]:
+                scores[land] += 2
 
-    # --- Vraag 3: Wat zoekt u op vakantie? ---
+    # -------------------------------
+    # --- Vraag 3: Wat zoekt u? ---
+    # -------------------------------
     if antwoord3 == "actief":
-        scores["Nepal"] += 3
-        scores["Kenia"] += 2
-        scores["Tanzania"] += 2
+        for land in ["Nepal", "Kenia", "Tanzania", "Peru", "Bolivia", "Kirgistan", "Oeganda"]:
+            scores[land] += 3
+
     elif antwoord3 == "relax":
-        scores["Filipijnen"] += 3
-        scores["Cambodja"] += 2
+        for land in ["Filipijnen", "Seychellen", "Jamaica", "Mexico", "Kreta", "Cyprus"]:
+            scores[land] += 3
+
     elif antwoord3 == "cultuur":
-        scores["India"] += 3
-        scores["Vietnam"] += 2
-        scores["Cambodja"] += 2
+        for land in ["India", "Vietnam", "Cambodja", "Iran", "Oezbekistan", "Jordanië", "Marokko", "Georgië", "Armenië"]:
+            scores[land] += 3
+
     elif antwoord3 == "feest":
-        scores["Ghana"] += 2
-        scores["Filipijnen"] += 2
+        for land in ["Ghana", "Filipijnen", "Spanje", "Jamaica", "Mexico", "Brazilië"]:
+            scores[land] += 2
 
-    # --- Vraag 4: Welk weer spreekt u het meeste aan? ---
+    # -------------------------------
+    # --- Vraag 4: Weer ---
+    # -------------------------------
     if antwoord4 == "sneeuw":
-        scores["Nepal"] += 3
+        for land in ["Nepal", "Oostenrijk", "Canada", "Kirgistan"]:
+            scores[land] += 3
+
     elif antwoord4 == "zon":
-        scores["Vietnam"] += 2
-        scores["Filipijnen"] += 2
-        scores["Cambodja"] += 2
+        for land in [
+            "Vietnam", "Filipijnen", "Cambodja", "Thailand", "Indonesië",
+            "Kreta", "Cyprus", "Spanje", "Egypte", "Seychellen", "Mexico",
+            "Jamaica", "Brazilië", "Guyana", "Marokko", "Oeganda",
+            "Zuid-Afrika", "Jordanië", "Laos"
+        ]:
+            scores[land] += 2
+
     elif antwoord4 == "gematigd":
-        scores["India"] += 2
-        scores["Ghana"] += 2
+        for land in ["India", "Frankrijk", "Georgië", "Armenië", "Peru", "Bolivia", "Canada"]:
+            scores[land] += 2
+
     elif antwoord4 == "geen":
-        scores["Tanzania"] += 1
-        scores["Kenia"] += 1
+        for land in scores:
+            scores[land] += 1
 
-    # --- Vraag 5: Met wie wilt u graag op vakantie? ---
+    # -------------------------------
+    # --- Vraag 5: Met wie? ---
+    # -------------------------------
     if antwoord5 == "alleen":
-        scores["Nepal"] += 2
-        scores["India"] += 1
-    elif antwoord5 == "koppel":
-        scores["Filipijnen"] += 2
-        scores["Cambodja"] += 2
-    elif antwoord5 == "kinderen":
-        scores["Tanzania"] += 2
-        scores["Kenia"] += 2
-    elif antwoord5 == "pubers":
-        scores["Vietnam"] += 2
-        scores["Ghana"] += 1
-    elif antwoord5 == "jongeren":
-        scores["Ghana"] += 2
-        scores["Filipijnen"] += 1
-    elif antwoord5 == "volwassenen":
-        scores["India"] += 2
-        scores["Cambodja"] += 1
-    elif antwoord5 == "groep":
-        scores["Kenia"] += 2
-        scores["Tanzania"] += 2
+        for land in [
+            "Nepal", "India", "Egypte", "Seychellen", "Brazilië", "Guyana",
+            "Laos", "Vietnam", "Oeganda", "Peru", "Bolivia"
+        ]:
+            scores[land] += 2
 
-    # --- Vraag 6: Waarin verblijft u het liefste? ---
+    elif antwoord5 == "koppel":
+        for land in ["Filipijnen", "Cambodja", "Kreta", "Cyprus", "Seychellen", "Jamaica", "Marokko"]:
+            scores[land] += 2
+
+    elif antwoord5 == "kinderen":
+        for land in ["Tanzania", "Kenia", "Mexico", "Kreta", "Cyprus"]:
+            scores[land] += 2
+
+    elif antwoord5 == "pubers":
+        for land in ["Vietnam", "Ghana", "Spanje"]:
+            scores[land] += 2
+
+    elif antwoord5 == "jongeren":
+        for land in ["Ghana", "Filipijnen", "Spanje", "Thailand", "Brazilië"]:
+            scores[land] += 2
+
+    elif antwoord5 == "volwassenen":
+        for land in [
+            "India", "Cambodja", "Jamaica", "Mexico", "Brazilië", "Guyana",
+            "Zuid-Afrika", "Georgië", "Armenië", "Iran", "Oezbekistan",
+            "Kirgistan", "Marokko"
+        ]:
+            scores[land] += 2
+
+    elif antwoord5 == "groep":
+        for land in ["Kenia", "Tanzania"]:
+            scores[land] += 2
+
+    # -------------------------------
+    # --- Vraag 6: Verblijf ---
+    # -------------------------------
     if antwoord6 == "resort":
-        scores["Filipijnen"] += 2
-        scores["Vietnam"] += 1
+        for land in ["Filipijnen", "Vietnam", "Kreta", "Cyprus", "Egypte", "Seychellen", "Mexico", "Jamaica"]:
+            scores[land] += 2
+
     elif antwoord6 == "hostel":
-        scores["Cambodja"] += 2
-        scores["India"] += 1
+        for land in ["Cambodja", "India", "Brazilië", "Peru", "Bolivia", "Laos", "Vietnam"]:
+            scores[land] += 2
+
     elif antwoord6 == "tent":
-        scores["Nepal"] += 2
-        scores["Kenia"] += 2
-        scores["Tanzania"] += 2
+        for land in ["Nepal", "Kenia", "Tanzania", "Kirgistan", "Oeganda", "Seychellen"]:
+            scores[land] += 2
+
     elif antwoord6 == "airbnb":
-        scores["Ghana"] += 2
-        scores["India"] += 1
+        for land in ["Ghana", "India", "Frankrijk", "Kreta", "Cyprus"]:
+            scores[land] += 2
 
     # Beste bestemming kiezen
     resultaat = max(scores, key=scores.get)
@@ -133,4 +219,3 @@ def bepaal_resultaat(event=None):
 
     # Confetti na 4 seconden weer weg (via JavaScript eval)
     setTimeout(lambda: eval("hideConfettiJS()"), 4000)
-
