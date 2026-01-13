@@ -35,7 +35,7 @@ def bepaal_resultaat(event=None):
         "Spanje": 0,
         "Oostenrijk": 0,
         "Frankrijk": 0,
-        "Nederland: 0", 
+        "Nederland": 0, 
 
         # Amerika
         "Mexico": 0,
