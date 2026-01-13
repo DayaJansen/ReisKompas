@@ -95,8 +95,7 @@ def bepaal_resultaat(event=None):
     # --- Vraag 2: Afstand ---
     # -------------------------------
     if antwoord2 == "binnenNL":
-        for land in ["Nederland"]
-        scores["land"] += 10
+        scores["Nederland"] += 10
 
     elif antwoord2 == "binnenEU":
         for land in ["Kreta", "Cyprus", "Spanje", "Oostenrijk", "Frankrijk", "Georgië", "Armenië"]:
