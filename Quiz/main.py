@@ -35,6 +35,7 @@ def bepaal_resultaat(event=None):
         "Spanje": 0,
         "Oostenrijk": 0,
         "Frankrijk": 0,
+        "Nederland: 0", 
 
         # Amerika
         "Mexico": 0,
@@ -94,7 +95,8 @@ def bepaal_resultaat(event=None):
     # --- Vraag 2: Afstand ---
     # -------------------------------
     if antwoord2 == "binnenNL":
-        pass
+        for land in ["Nederland"]
+        scores["land"] += 10
 
     elif antwoord2 == "binnenEU":
         for land in ["Kreta", "Cyprus", "Spanje", "Oostenrijk", "Frankrijk", "Georgië", "Armenië"]:
