@@ -126,7 +126,7 @@ def bepaal_resultaat(event=None):
     # -------------------------------
     if antwoord3 == "actief":
         for land in ["Nepal", "Kenia", "Tanzania", "Peru", "Bolivia", "Kirgistan", "Oeganda"]:
-            scores[land] += 3
+            scores[land] += 2
 
     elif antwoord3 == "relax":
         for land in ["Filipijnen", "Seychellen", "Jamaica", "Mexico", "Kreta", "Cyprus"]:
