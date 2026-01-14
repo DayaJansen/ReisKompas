@@ -237,9 +237,7 @@ def bepaal_resultaat(event=None):
     # Opnieuw-knop laten zien
     document.getElementById("opnieuwBtn").style.display = "block"
 
-    # Confetti laten zien 
-    document.getElementById("confetti").style.display = "block"
+    from js import showConfetti
+    showConfetti()
 
-    # Confetti na 4 seconden weer weg (via JavaScript eval)
-    setTimeout(lambda: eval("hideConfettiJS()"), 4000)
 

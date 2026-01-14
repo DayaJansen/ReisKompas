@@ -126,8 +126,13 @@
     <py-script src="main.py"></py-script>
 
     <script>
-    function hideConfettiJS() {
-        document.getElementById("confetti").style.display = "none";
+    function showConfetti() {
+    const confetti = document.getElementById("confetti");
+    confetti.style.display = "block";
+
+    setTimeout(() => {
+        confetti.style.display = "none";
+    }, 4000);
     }
     </script>
 
