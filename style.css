@@ -1,7 +1,9 @@
 /* plaatje */ 
 .header-image {
     position: relative;
-    height: 450px;
+    height: 450px; 
+    width: 100vw; 
+    margin: 0;
 }
 
 .header-image img {
@@ -58,6 +60,8 @@ Body{
     font-size: 20px;
     background-color: rgb(245, 229, 215);
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 /* linkje naar memory */ 
@@ -70,6 +74,15 @@ a.linksintext:hover {
     color: black;
     font-style: italic;
     font-weight: bold;
+}
+
+/*Plaatje overtourisme op homepagina*/
+.Homepagina_overtourisme {
+    float: right; 
+    width: 350px; /* grootte van het plaatje */ 
+    margin-left: 40px; /* ruimte tussen tekst en plaatje */ 
+    margin-bottom: 15px;
+    border-radius: 14px;
 }
 
 /*footer*/
@@ -88,25 +101,26 @@ footer {
     box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
+/*Logo in menubalk*/
 #logo img {
     margin-right: 30px;
     height: 210px;
     width: auto;
 }
 
-/*Relaxte vakanties pagina*/
-.container_relaxvakanties {
+/*Type vakanties pagina's*/
+.container_type_vakanties {
     display: grid;
     grid-template-columns: 1fr 1fr; /*twee kolommen*/
     gap: 50px; /*ruimte tussen de blokken*/
 }
 
-.container_relaxvakanties > div {   /*Hierbij worden alle divs gepakt binnen de container (de continenten)*/
+.container_type_vakanties > div {   /*Hierbij worden alle divs gepakt binnen de container (de continenten)*/
     border: 1px solid #ccc;  /*randje om de vakken van de continenten*/
     padding: 20px;
 }
 
-.relaxvakantie_plaatjes {
+.type_vakanties_plaatjes {
     width: 350px;
     height: 300px;
 }
