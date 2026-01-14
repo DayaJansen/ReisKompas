@@ -50,6 +50,20 @@ def bepaal_resultaat(event=None):
         "Jordanië": 0,
     }
 
+    # Lijsten voor afstandsfilter
+    EU_LANDEN = [
+        "Nederland",
+        "Kreta",
+        "Cyprus",
+        "Spanje",
+        "Oostenrijk",
+        "Frankrijk"
+    ]
+
+    NIET_EU_LANDEN = [
+        land for land in scores if land not in EU_LANDEN
+    ]
+
     # Antwoorden van de HTML halen
     antwoord1 = document.getElementById("vraag1").value
     antwoord2 = document.getElementById("vraag2").value
@@ -95,16 +109,15 @@ def bepaal_resultaat(event=None):
     # --- Vraag 2: Afstand ---
     # -------------------------------
     if antwoord2 == "binnenNL":
-        scores["Nederland"] += 10
+        scores["Nederland"] += 20
 
     elif antwoord2 == "binnenEU":
-        for land in ["Kreta", "Cyprus", "Spanje", "Oostenrijk", "Frankrijk", "Georgië", "Armenië"]:
-            scores[land] += 2
+        for land in EU_LANDEN:
+            scores[land] += 5
 
     elif antwoord2 == "buitenEU":
-        for land in scores:
-            if land not in ["Kreta", "Cyprus", "Spanje", "Oostenrijk", "Frankrijk"]:
-                scores[land] += 2
+        for land in NIET_EU_LANDEN:
+            scores[land] += 5
 
     # -------------------------------
     # --- Vraag 3: Wat zoekt u? ---
@@ -206,8 +219,17 @@ def bepaal_resultaat(event=None):
         for land in ["Ghana", "India", "Frankrijk", "Kreta", "Cyprus"]:
             scores[land] += 2
 
-    # Beste bestemming kiezen
-    resultaat = max(scores, key=scores.get)
+    # Beste bestemming kiezen (met afstandsfilter)
+    if antwoord2 == "binnenEU":
+        gefilterde_scores = {land: score for land, score in scores.items() if land in EU_LANDEN}
+
+    elif antwoord2 == "buitenEU":
+        gefilterde_scores = {land: score for land, score in scores.items() if land in NIET_EU_LANDEN}
+
+    else:
+        gefilterde_scores = scores
+
+    resultaat = max(gefilterde_scores, key=gefilterde_scores.get)
 
     # Resultaat tonen in HTML
     document.getElementById("resultaat").innerText = f"Jouw resultaat is: {resultaat}"
@@ -220,3 +242,4 @@ def bepaal_resultaat(event=None):
 
     # Confetti na 4 seconden weer weg (via JavaScript eval)
     setTimeout(lambda: eval("hideConfettiJS()"), 4000)
+
