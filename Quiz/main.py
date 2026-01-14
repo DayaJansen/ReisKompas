@@ -1,7 +1,21 @@
 # Document ophalen van javascript naar python en setTimeout voor confetti
 from js import document, setTimeout
 
+# Voorkomt dat de quiz meerdere keren tegelijk wordt uitgevoerd
+is_bezig = False
+
+
 def bepaal_resultaat(event=None):
+    global is_bezig
+
+    # Dubbel klikken blokkeren
+    if is_bezig:
+        return
+    is_bezig = True
+
+    # Submit-knop tijdelijk uitschakelen
+    document.getElementById("submitBtn").disabled = True
+
     # Scoretabel voor bestemmingen
     scores = {
         # Azië
@@ -35,7 +49,7 @@ def bepaal_resultaat(event=None):
         "Spanje": 0,
         "Oostenrijk": 0,
         "Frankrijk": 0,
-        "Nederland": 0, 
+        "Nederland": 0,
 
         # Amerika
         "Mexico": 0,
@@ -237,7 +251,19 @@ def bepaal_resultaat(event=None):
     # Opnieuw-knop laten zien
     document.getElementById("opnieuwBtn").style.display = "block"
 
+    # Confetti tonen
     from js import showConfetti
     showConfetti()
 
+    # Na korte tijd klik weer toestaan
+    def reset_state():
+        global is_bezig
+        is_bezig = False
+        document.getElementById("submitBtn").disabled = False
+
+    setTimeout(reset_state, 500)
+
+
+# PyScript is geladen → knop activeren
+document.getElementById("submitBtn").disabled = False
 

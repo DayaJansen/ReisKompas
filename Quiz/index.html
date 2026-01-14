@@ -49,7 +49,6 @@
             <!-- Vragen benoemen en schrijven -->
             <!-- Vraag 1 -->
             <label for="vraag1">1. Hoe lang wilt u op vakantie? </label><br>
-            <!-- Keuze menu voor antwoorden vraag en antwoorden benoemen -->
             <select id="vraag1">
                 <option value="weekend">1 weekend</option>
                 <option value="week">1 week</option>
@@ -105,8 +104,11 @@
                 <option value="airbnb">Huurhuis (Airbnb)</option>
             </select><br><br>
 
-            <!-- Knop om de quiz in te dienen-->
-            <button id="submitBtn" type="button" py-click="bepaal_resultaat">Verstuur</button>
+            <!-- Knop om de quiz in te dienen -->
+            <!-- Staat standaard uit zodat PyScript eerst volledig kan laden -->
+            <button id="submitBtn" type="button" py-click="bepaal_resultaat" disabled>
+                Verstuur
+            </button>
         </form>
 
         <!-- Titel en containter voor het resultaat -->
@@ -127,15 +129,14 @@
 
     <script>
     function showConfetti() {
-    const confetti = document.getElementById("confetti");
-    confetti.style.display = "block";
+        const confetti = document.getElementById("confetti");
+        confetti.style.display = "block";
 
-    setTimeout(() => {
-        confetti.style.display = "none";
-    }, 4000);
+        setTimeout(() => {
+            confetti.style.display = "none";
+        }, 4000);
     }
     </script>
 
 </body>
 </html>
-
