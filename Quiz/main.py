@@ -74,9 +74,8 @@ def bepaal_resultaat(event=None):
     antwoord5 = document.getElementById("vraag5").value
     antwoord6 = document.getElementById("vraag6").value
 
-    # -------------------------------
     # --- Vraag 1: Duur vakantie ---
-    # -------------------------------
+
     if antwoord1 == "weekend":
         # korte trips → vooral Europa
         for land in ["Kreta", "Cyprus", "Spanje", "Oostenrijk", "Frankrijk"]:
@@ -107,9 +106,7 @@ def bepaal_resultaat(event=None):
         ]:
             scores[land] += 2
 
-    # -------------------------------
     # --- Vraag 2: Afstand ---
-    # -------------------------------
     if antwoord2 == "binnenNL":
         scores["Nederland"] += 20
 
@@ -121,9 +118,7 @@ def bepaal_resultaat(event=None):
         for land in NIET_EU_LANDEN:
             scores[land] += 5
 
-    # -------------------------------
     # --- Vraag 3: Wat zoekt u? ---
-    # -------------------------------
     if antwoord3 == "actief":
         for land in ["Nepal", "Kenia", "Tanzania", "Peru", "Bolivia", "Kirgistan", "Oeganda"]:
             scores[land] += 2
@@ -140,9 +135,7 @@ def bepaal_resultaat(event=None):
         for land in ["Ghana", "Filipijnen", "Spanje", "Jamaica", "Mexico", "Brazilië"]:
             scores[land] += 2
 
-    # -------------------------------
     # --- Vraag 4: Weer ---
-    # -------------------------------
     if antwoord4 == "sneeuw":
         for land in ["Nepal", "Oostenrijk", "Canada", "Kirgistan"]:
             scores[land] += 3
@@ -164,9 +157,7 @@ def bepaal_resultaat(event=None):
         for land in scores:
             scores[land] += 1
 
-    # -------------------------------
     # --- Vraag 5: Met wie? ---
-    # -------------------------------
     if antwoord5 == "alleen":
         for land in [
             "Nepal", "India", "Egypte", "Seychellen", "Brazilië", "Guyana",
@@ -202,9 +193,7 @@ def bepaal_resultaat(event=None):
         for land in ["Kenia", "Tanzania"]:
             scores[land] += 2
 
-    # -------------------------------
     # --- Vraag 6: Verblijf ---
-    # -------------------------------
     if antwoord6 == "resort":
         for land in ["Filipijnen", "Vietnam", "Kreta", "Cyprus", "Egypte", "Seychellen", "Mexico", "Jamaica"]:
             scores[land] += 2
@@ -221,9 +210,7 @@ def bepaal_resultaat(event=None):
         for land in ["Ghana", "India", "Frankrijk", "Kreta", "Cyprus"]:
             scores[land] += 2
 
-    # -------------------------------
-    # --- Beste bestemming kiezen ---
-    # -------------------------------
+    # --- Bestemming kiezen dat klopt ---
     if antwoord2 == "binnenEU":
         gefilterde_scores = {land: score for land, score in scores.items() if land in EU_LANDEN}
 
