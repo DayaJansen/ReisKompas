@@ -6,10 +6,13 @@
     <!-- Tekencodering van de pagina -->
     <meta charset="UTF-8">
     <title>ReisKompas Quiz</title>
+
     <!-- CSS-bestand koppelen aan HTML -->
     <link rel="stylesheet" href="style.css">
+
     <!-- CSS-bestand ophalen van de Pyscript website -->
     <link rel="stylesheet" href="https://pyscript.net/releases/2025.3.1/core.css" />
+
     <!-- Javascript-bestand ophalen van de Pyscript website -->
     <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
 </head>
@@ -17,16 +20,16 @@
 <body>
 
     <!-- Confetti-afbeelding (onzichtbaar tot resultaat verschijnt) -->
-    <img id="confetti" src="../Plaatjes/confetti.png" alt="Confetti">
+    <img id="confetti" src="../Plaatjes/confetti.png" alt="Confetti" style="display:none;">
 
     <header>
         <div class="header-image">
-            <img src="../Plaatjes/Homeplaatje.png" alt="Header afbeelding"> 
-            <!-- Bron van het plaatje: https://pixers.nl/fotobehang/vintage-kaart-reis-en-kompas-met-oude-stof-textuur-achtergrond-achtergrond-avontuur-95358395 -->
+            <img src="../Plaatjes/Homeplaatje.png" alt="Header afbeelding">
+            <!-- Bron: pixers.nl -->
         </div>
 
-        <!--Navigatie-->
-        <nav class="menu">      
+        <!-- Navigatie -->
+        <nav class="menu">
             <div id="logo">
                 <a href="../index.html">
                     <img src="../Plaatjes/logowebsite.png">
@@ -43,12 +46,11 @@
     <main>
         <h1>ReisKompas Quiz</h1>
 
-        <!-- Quiz formulier benoemen-->
+        <!-- Quiz formulier -->
         <form id="quizForm">
 
-            <!-- Vragen benoemen en schrijven -->
             <!-- Vraag 1 -->
-            <label for="vraag1">1. Hoe lang wilt u op vakantie? </label><br>
+            <label for="vraag1">1. Hoe lang wilt u op vakantie?</label><br>
             <select id="vraag1">
                 <option value="weekend">1 weekend</option>
                 <option value="week">1 week</option>
@@ -104,38 +106,38 @@
                 <option value="airbnb">Huurhuis (Airbnb)</option>
             </select><br><br>
 
-            <!-- Knop om de quiz in te dienen -->
-            <!-- Staat standaard uit zodat PyScript eerst volledig kan laden -->
-            <button id="submitBtn" type="button" py-click="bepaal_resultaat" disabled>
+            <!-- Verstuurknop -->
+            <button id="submitBtn" type="button" py-click="bepaal_resultaat">
                 Verstuur
             </button>
         </form>
 
-        <!-- Titel en containter voor het resultaat -->
+        <!-- Resultaat -->
         <h2>Jouw resultaat:</h2>
         <div id="resultaat"></div>
 
-        <!-- Opnieuw-knop (zichtbaar na resultaat) -->
-        <button id="opnieuwBtn" onclick="location.reload()">Opnieuw</button>
+        <!-- Opnieuw -->
+        <button id="opnieuwBtn" onclick="location.reload()" style="display:none;">
+            Opnieuw
+        </button>
 
         <footer>
             <p>&copy; 2025 ReisKompas</p>
         </footer>
-
     </main>
 
-    <!-- Koppelen phyton code, main-py, aan de HTML-pagina -->
+    <!-- Python logica -->
     <py-script src="main.py"></py-script>
 
+    <!-- Confetti functie -->
     <script>
-    function showConfetti() {
-        const confetti = document.getElementById("confetti");
-        confetti.style.display = "block";
-
-        setTimeout(() => {
-            confetti.style.display = "none";
-        }, 4000);
-    }
+        function showConfetti() {
+            const confetti = document.getElementById("confetti");
+            confetti.style.display = "block";
+            setTimeout(() => {
+                confetti.style.display = "none";
+            }, 4000);
+        }
     </script>
 
 </body>
